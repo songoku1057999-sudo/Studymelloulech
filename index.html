@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b14">
+  <meta name="description" content="Study Hub — your learning space.">
+  <title>Study Hub | Learn Without Limits</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome" aria-label="Study Hub home">
+      <span class="brand-mark">S<span>H</span></span>
+      <span>STUDY<span class="brand-accent">HUB</span></span>
+    </a>
+    <div class="top-actions">
+      <span class="status"><i></i> YOUR LEARNING SPACE</span>
+      <button class="outline-btn" id="headerUnlock"><span class="crown">✦</span> Unlock Premium</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="homeView" class="view active">
+      <div class="hero">
+        <div class="eyebrow"><span class="eyebrow-line"></span> LEARN. PRACTICE. GROW.</div>
+        <h1>Make your next<br><span class="gradient-text">breakthrough.</span></h1>
+        <p class="hero-copy">Everything you need to keep learning, all in one place.<br class="desktop-only"> Choose a subject and get started.</p>
+        <div class="hero-meta"><span class="meta-dot"></span> 4 SUBJECTS <b>·</b> 28 LESSON CARDS</div>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="section-kicker">YOUR CLASSROOM</span><h2>Explore subjects</h2></div>
+        <span class="section-note">CHOOSE YOUR PATH <span>↘</span></span>
+      </div>
+      <div class="subject-grid">
+        <button class="subject-card card-arabic" data-subject="arabic">
+          <span class="card-top"><span class="subject-icon">ع</span><span class="card-arrow">↗</span></span>
+          <span class="subject-name">Arabic</span><span class="subject-desc">Language, literature & expression</span>
+          <span class="card-bottom"><span>07 LESSONS</span><span class="mini-line"></span></span>
+        </button>
+        <button class="subject-card card-english" data-subject="english">
+          <span class="card-top"><span class="subject-icon">文</span><span class="card-arrow">↗</span></span>
+          <span class="subject-name">English</span><span class="subject-desc">Build confidence with every word</span>
+          <span class="card-bottom"><span>07 LESSONS</span><span class="mini-line"></span></span>
+        </button>
+        <button class="subject-card card-math" data-subject="mathematics">
+          <span class="card-top"><span class="subject-icon">∑</span><span class="card-arrow">↗</span></span>
+          <span class="subject-name">Mathematics</span><span class="subject-desc">Logic, numbers & problem solving</span>
+          <span class="card-bottom"><span>07 LESSONS</span><span class="mini-line"></span></span>
+        </button>
+        <button class="subject-card card-computer" data-subject="computer">
+          <span class="card-top"><span class="subject-icon">&lt;/&gt;</span><span class="card-arrow">↗</span></span>
+          <span class="subject-name">Computer Science</span><span class="subject-desc">Discover the world of technology</span>
+          <span class="card-bottom"><span>07 LESSONS</span><span class="mini-line"></span></span>
+        </button>
+      </div>
+      <div class="home-bottom">
+        <div class="bottom-icon">✧</div><div><strong>A little progress every day adds up.</strong><p>Pick a subject and keep moving forward.</p></div>
+        <span class="bottom-decoration">STUDY HUB / 2026</span>
+      </div>
+    </section>
+
+    <section id="subjectView" class="view">
+      <button class="back-link" id="backHome">← <span>Back to subjects</span></button>
+      <div class="subject-hero">
+        <div><span class="section-kicker">YOUR CLASSROOM / <span id="subjectCrumb">SUBJECT</span></span>
+          <h1 id="subjectTitle">Arabic</h1>
+          <p id="subjectSubtitle">Explore your learning materials.</p>
+        </div>
+        <div class="lesson-count"><strong>07</strong><span>LESSONS</span></div>
+      </div>
+      <div class="lesson-toolbar"><div><span class="section-kicker">THE COLLECTION</span><h2>Learning materials</h2></div><span class="access-label" id="accessLabel">03 FREE <b>·</b> 04 PREMIUM</span></div>
+      <div class="lesson-grid" id="lessonGrid"></div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 STUDY HUB</span><span>MADE FOR CURIOUS MINDS <b>✦</b></span></footer>
+
+  <div class="modal-backdrop" id="redeemModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-symbol">✦</div>
+      <span class="section-kicker">STUDY HUB / PREMIUM ACCESS</span>
+      <h2 id="modalTitle">Unlock your potential.</h2>
+      <p>Enter your redeem code to unlock all 4 premium lessons in every subject.</p>
+      <form id="redeemForm">
+        <label for="redeemInput">REDEEM CODE</label>
+        <input id="redeemInput" type="text" placeholder="Enter your code" autocomplete="off" spellcheck="false">
+        <p class="form-message" id="redeemMessage" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">Unlock Premium <span>→</span></button>
+      </form>
+      <div class="secure-note">✧ ONE CODE · ALL SUBJECTS</div>
+    </div>
+  </div>
+
+  <aside class="creator-widget" id="creatorWidget">
+    <button class="creator-toggle" id="creatorToggle"><span class="creator-avatar">?</span><span><b>Ask the Creator</b><small>Have a question?</small></span><span class="creator-chevron">⌃</span></button>
+    <div class="creator-panel" id="creatorPanel">
+      <div class="chat-heading"><span class="online-dot"></span> Creator assistant <small>LOCAL CHAT</small></div>
+      <div class="chat-messages" id="chatMessages"><div class="chat-bubble bot">Hi! Type your question below.</div></div>
+      <form class="chat-form" id="chatForm"><input id="chatInput" type="text" placeholder="Write a message..." autocomplete="off"><button aria-label="Send message" type="submit">➤</button></form>
+      <div class="chat-hint">Try asking: <b>من صانع الموقع</b></div>
+    </div>
+  </aside>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
